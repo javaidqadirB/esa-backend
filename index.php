@@ -42,6 +42,7 @@ p {
 h1{
 
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: solid goldenrod;
 }
 
 .container{
@@ -54,6 +55,12 @@ h1{
     padding-right: 5%;
     box-sizing: border-box;
     position: relative;
+  
+}
+
+.container h1{
+  border: solid 2px goldenrod;
+  background-color: black;
 }
 
 
