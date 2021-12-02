@@ -7,42 +7,28 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <style>
     h1{
-  color: #484848;
+  color: red;
   font-size: 50px;
   font-weight: bold;
   font-family: monospace;
   letter-spacing: 7px;
   cursor: pointer
 }
-h1 span{
-  transition: .5s linear
-}
-h1:hover span:nth-child(1){
-  margin-right: 5px
-}
-h1:hover span:nth-child(1):after{
-  content: "'";
-}
-h1:hover span:nth-child(2){
-  margin-left: 30px
-}
-h1:hover span{
-  color: blueviolet;
-  text-shadow: 0 0 10px black,
-               0 0 20px #fff, 
-               0 0 40px #fff;
-}
+
 
 p {
   text-shadow: 2px 2px 5px black;
   font-size: 55px;
   font-weight: bold;
+
 }
 
 h1{
 
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border: solid goldenrod;
+    box-shadow: greenyellow;
+
 }
 
 .container{
@@ -59,8 +45,9 @@ h1{
 }
 
 .container h1{
-  border: solid 2px goldenrod;
+  border: round 2px goldenrod;
   background-color: black;
+  
 }
 
 
@@ -69,6 +56,14 @@ h1{
   position: absolute;
   top: 120px;
   left: 16px;
+ 
+}
+
+.top-left:hover{
+  background-color: greenyellow;
+  border: none;
+  box-shadow: 5px 5px 10px #484848;
+  transition: 0.5s;
 }
 
 </style>
