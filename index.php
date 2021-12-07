@@ -14,8 +14,8 @@
 
 /*designing ang arrangement of all the headings and paragraphs by using style.css and js files*/
     h1{
-  color: red;
-  font-size: 50px;
+  color: black;
+  font-size: 35px;
   font-weight: bold;
   font-family: monospace;
   letter-spacing: 7px;
@@ -41,7 +41,7 @@ h1{
 /*customized the container and set into the screen*/
 .container{
     width: 100;
-    height: 100vh;
+    height: 90vh;
     background-image: url(background.png.png);
     background-position: center;
     background-size: cover;
@@ -69,8 +69,8 @@ h1{
 
 /*done the hover effect on cards*/
 .top-left:hover{
-    background-color: greenyellow;
-    border: none;
+    background-color: skyblue;
+    border: solid;
     box-shadow: 5px 5px 10px #484848;
     transition: 0.5s;
 }
@@ -105,10 +105,20 @@ h1{
     <h1>TARGETS</h1>
 </a> 
 
+<!--added  View TARGETS php file and button for it-->
+<a href="viewtarget.php">
+    <h1>View TARGETS</h1>
+</a> 
+
 <!--added VIEW MISSION php file so we can easily get the data or users and button for it-->
     <a href="viewmission.php">
     <h1>View Mission</h1>
 </a>
+
+<!--added  View ATTENDS php file and button for it-->
+<a href="viewattends.php">
+    <h1>View Attends</h1>
+</a> 
 
 <!--added VIEW ASTRONAUTS php file so we can easily get the data or users and button for it-->
             <a href="viewastronauts.php">
