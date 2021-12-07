@@ -53,26 +53,26 @@ h1{
 }
 
 .container h1{
-  border: round 2px goldenrod;
-  background-color: black;
+    border: round 2px goldenrod;
+    background-color: black;
   
 }
 
 
 /* Top left text */
 .top-left {
-  position: absolute;
-  top: 120px;
-  left: 16px;
+    position: absolute;
+    top: 120px;
+    left: 16px;
  
 }
 
 /*done the hover effect on cards*/
 .top-left:hover{
-  background-color: greenyellow;
-  border: none;
-  box-shadow: 5px 5px 10px #484848;
-  transition: 0.5s;
+    background-color: greenyellow;
+    border: none;
+    box-shadow: 5px 5px 10px #484848;
+    transition: 0.5s;
 }
 
 </style>
@@ -85,30 +85,30 @@ h1{
 <div class="top-left">
 
 <!--added ASRTONAUTS php file and button for it-->
-            <a href="astronauts.php">
-              <h1>ASTRONAUTS</h1>
-            </a>
+    <a href="astronauts.php">
+    <h1>ASTRONAUTS</h1>
+</a>
 
 <!--added ATTENDS php file and button for it-->       
-            <a href="attends.php">
-              <h1>ATTENDS</h1>
-          </a>
+    <a href="attends.php">
+    <h1>ATTENDS</h1>
+</a>
           
  <!--added MISSION php file and button for it-->
-            <a href="mission.php">
-             <h1>MISSION</h1>
-          </a>
+    <a href="mission.php">
+    <h1>MISSION</h1>
+</a>
           
 
 <!--added TARGETS php file and button for it-->
-            <a href="targets.php">
-              <h1>TARGETS</h1>
-            </a> 
+    <a href="targets.php">
+    <h1>TARGETS</h1>
+</a> 
 
 <!--added VIEW MISSION php file so we can easily get the data or users and button for it-->
-            <a href="viewmission.php">
-               <h1>View Mission</h1>
-            </a>
+    <a href="viewmission.php">
+    <h1>View Mission</h1>
+</a>
 
 <!--added VIEW ASTRONAUTS php file so we can easily get the data or users and button for it-->
             <a href="viewastronauts.php">
