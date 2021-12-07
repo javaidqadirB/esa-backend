@@ -28,7 +28,7 @@
             include ("db_connection.php");
             
 // declaring a varialbe called sql and equaling it to show all of the data in mission table
-            $sql="select * from target";
+            $sql="select * from attends";
             
 // declaring a variable called run, which runs the function mysqli_query on the database
             $run=mysqli_query($connection, $sql);
