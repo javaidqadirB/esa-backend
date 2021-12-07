@@ -1,33 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="eng">
 <head>
+<!--Main body and title of the webpage including paragraph too-->
     <title>Targets Form</title>
+
+<!--linked bootstrap for customizing the texts and appearence, I have directly downloaded css and js files-->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 </head>
 <body>
 
 <div> 
 <?php 
+//here im including my connection file in order to connect to the database
 include "db_connection.php";
+
+//here im including the validation file in order to validate the inputs in our forms
+include "validation.php";
+
+/*used if and else statement to print out the inserted data*/
     if(isset($_POST['create'])){
         echo 'Data Submitted.' . "<br>";
+
+// creating variables and setting them to our form input names using the POST
         $id = $_POST["id"];
         $Name = $_POST["Name"];
         $FirstMission	 = $_POST["FirstMission"];
         $Type	 = $_POST["Type"];
         $Nomission	 = $_POST["Nomission"];
 
-
+// below delaring a variable sql, which will contain a query for the insertion into the database
         $sql = "INSERT INTO targets(id, Name, First_Mission, Type, No_mission) VALUES ($id, '$FirstMission', $Type, $Nomission)";
 
+//using an if statement to run the query on the database
         if(!mysqli_query($connection, $sql)) {
+
+// if the query fails or the connection to the database fails, the program should die and display an error message
             die("Error:" .mysqli_error($connection));
         }
         else{
+
+// if succesfull print data inserted
             echo "Data inserted";
         }
     }
     ?>
+
+<!--created the form for TARGET and linked to target.php file  and created all the forms and fulfilled all the requirements needed-->
     <form action="targets.php" method="post">
         <div class="container">
 
