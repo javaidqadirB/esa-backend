@@ -23,13 +23,13 @@
         if(isset($_POST['create'])){
         echo 'Data Submitted.' . "<br>";
             // creating variables and setting them to our form input names using the POST
-        $mission_Id = $_POST["mission_Id"];
+        $mission_id = $_POST["mission_id"];
         $mission_name = $_POST["mission_name"];
         $no_mission = $_POST["no_mission"];
         $astronaut_id = $_POST["astronaut_id"];
 
 // below delaring a variable sql, which will contain a query for the insertion into the database
-        $sql = "INSERT INTO attends(mission_Id, mission_name, no_missions, astronaut_id) VALUES ($mission_Id, '$mission_name', $no_mission, '$astronaut_id')";
+        $sql = "INSERT INTO attends(mission_id, mission_name, no_missions, astronaut_id) VALUES ($mission_id, '$mission_name', $no_mission, '$astronaut_id')";
         
 //using an if statement to run the query on the database
         if(!mysqli_query($connection, $sql)) {
@@ -62,10 +62,10 @@
         <input  class="form-control" type="integar" name="mission_name" required>
 
         <label for="no_missions"><b>No Missions</b></label>
-        <input  class="form-control" type="integar" name="no_missions" required>
+        <input  class="form-control" type="integar" name="no_mission" required>
 
         <label for="astronaut_id"><b>Astronauts ID</b></label>
-        <input  class="form-control" type="integar" name="mission_id" required>
+        <input  class="form-control" type="integar" name="astronaut_id" required>
         <hr class="mb-3">
 
             <input class="btn btn-primary"  type="submit" name="create" value="SUBMIT">

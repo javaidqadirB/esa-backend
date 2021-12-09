@@ -14,7 +14,7 @@
 
 <body>
 <table border="1" width="100%">
-<div class="card-header"><h1>Astronouts</h1></div>
+<div class="card-header"><h1>Astronauts</h1></div>
 <tr>
     <th>Name</th>
 <th>No of Missions</th>

@@ -22,14 +22,13 @@ include "validation.php";
         echo 'Data Submitted.' . "<br>";
 
 // creating variables and setting them to our form input names using the POST
-        $id = $_POST["id"];
-        $Name = $_POST["Name"];
-        $FirstMission	 = $_POST["FirstMission"];
-        $Type	 = $_POST["Type"];
-        $Nomission	 = $_POST["Nomission"];
+        $Name = $_POST["name"];
+        $FirstMission	 = $_POST["firstmission"];
+        $Type	 = $_POST["type"];
+        $Nomission	 = $_POST["nomission"];
 
 // below delaring a variable sql, which will contain a query for the insertion into the database
-        $sql = "INSERT INTO targets(id, Name, First_Mission, Type, No_mission) VALUES ($id, '$FirstMission', $Type, $Nomission)";
+        $sql = "INSERT INTO targets(Name, First_Mission, Type, No_mission) VALUES ('$Name', '$FirstMission', '$Type', $Nomission)";
 
 //using an if statement to run the query on the database
         if(!mysqli_query($connection, $sql)) {
@@ -55,9 +54,7 @@ include "validation.php";
             <p>Fill all the details with correct values</p>
             <hr class="mb-3">
 
-            <label for="id"><b>ID</b></label>
-            <input  class="form-control" type="integar" name="id" required>
-
+        
             <label for="name"><b>Name</b></label>
             <input  class="form-control" type="text" name="name" required>
 
@@ -65,10 +62,10 @@ include "validation.php";
             <input  class="form-control" type="text" name="firstmission" required>
 
             <label for="type"><b>Type</b></label>
-            <input  class="form-control" type="integar" name="type" required>
+            <input  class="form-control" type="text" name="type" required>
 
             <label for="nomission"><b>No Mission</b></label>
-            <input  class="form-control" type="text" name="nomission" required>
+            <input  class="form-control" type="integer" name="nomission" required>
             <hr class="mb-3">
 
             <input class="btn btn-primary"  type="submit" name="create" value="SUBMIT">
