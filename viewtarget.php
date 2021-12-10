@@ -13,15 +13,37 @@
 
 </head>
 <body>
-<table border="1" width="100%">
-<div class="card-header"><h1>Target</h1></div>
+
+<!--Creating the table for the forms-->
+    <table border="1" width="100%">
+    <div class="card-header">
+    
+<!--Added the heading at the web page-->
+    <h1>Target</h1>
+
+<!--added back page button to go to the main page-->
+    <a href="index.php">Back to Main Page</a>
+
+</div>
+
+
+
 <tr>
 
-<th>ID</th>
-<th>Name</th>
-<th>First Mission</th>
-<th>Type</th>
-<th>No Mission</th>
+<!--Creating column for the ID-->
+    <th>ID</th>
+
+<!--Creating column for the Name-->
+    <th>Name</th>
+
+<!--Creating column for the First Mission-->
+    <th>First Mission</th>
+
+<!--Creating column for the Type-->
+    <th>Type</th>
+
+<!--Creating column for the No Mission-->
+    <th>No Mission</th>
 </tr>
     <?php
             
@@ -29,7 +51,7 @@
             include ("db_connection.php");
             
 // declaring a varialbe called sql and equaling it to show all of the data in mission table
-            $sql="select * from attends";
+            $sql="select * from targets";
             
 // declaring a variable called run, which runs the function mysqli_query on the database
             $run=mysqli_query($connection, $sql);
@@ -38,14 +60,14 @@
             while($data=mysqli_fetch_array($run)){
                 
 //declaring the variables which will display the fields
-            $id = $_POST["id"];
-            $Name = $_POST["Name"];
-            $FirstMission= $_POST["FirstMission"];
-            $Type= $_POST["Type"];
-            $Nomission= $_POST["Nomission"];
+            $id = $data["id"];
+            $Name = $data["Name"];
+            $FirstMission= $data["First_Mission"];
+            $Type= $data["Type"];
+            $Nomission= $data["No_mission"];
                 
 //displaying the table using the variables declared. displaying in a table form using tags
-                echo "<tr><td align='center'>$destination</td> <td align='center'>$launch_date</td><td align='center'>$type</td><td align='center'>$crew_size</td><td align='center'>$target_id</td></tr>";
+                echo "<tr><td align='center'>$id</td><td align='center'>$Name</td><td align='center'>$FirstMission</td><td align='center'>$Type</td><td align='center'>$Nomission</td></tr>";
 
 
 

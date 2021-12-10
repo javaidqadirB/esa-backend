@@ -13,14 +13,31 @@
 
 </head>
 <body>
-<table border="1" width="100%">
-<div class="card-header"><h1>Attends</h1></div>
+
+<!--Creating the table for the forms-->
+    <table border="1" width="100%">
+    <div class="card-header">
+   
+<!--Added the heading at the web page-->
+    <h1>Attends</h1>
+
+<!--added back page button to go to the main page-->
+    <a href="index.php">Back to Main Page</a>
+
+</div>
 <tr>
 
-<th>Mission ID</th>
-<th>Mission Name</th>
-<th>No Mission</th>
-<th>Astronaut ID</th>
+<!--Creating column for the Mission ID-->
+    <th>Mission ID</th>
+
+<!--Creating column for the Mission Name-->
+    <!-- <th>Mission Name</th> -->
+
+<!--Creating column for the No Mission-->
+    <!-- <th>No Mission</th> -->
+
+<!--Creating column for the Astronauts ID-->
+    <th>Astronaut ID</th>
 </tr>
     <?php
             
@@ -38,13 +55,13 @@
                 
                 
 //declaring the variables which will display the fields
-            $mission_Id = $_POST["mission_Id"];
-            $mission_name = $_POST["mission_name"];
-            $no_mission = $_POST["no_mission"];
-            $astronaut_id = $_POST["astronaut_id"];
+            $mission_Id = $data["mission_Id"];
+            // $mission_name = $_POST["mission_name"];
+            // $no_mission = $_POST["no_mission"];
+            $astronaut_id = $data["astronaut_id"];
                 
 //displaying the table using the variables declared. displaying in a table form using tags
-            echo "<tr><td align='center'>$destination</td> <td align='center'>$launch_date</td><td align='center'>$type</td><td align='center'>$crew_size</td><td align='center'>$target_id</td></tr>";
+            echo "<tr><td align='center'>$mission_Id</td><td align='center'>$astronaut_id</td></tr>";
 
             }
         

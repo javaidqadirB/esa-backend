@@ -13,15 +13,36 @@
 
 </head>
 <body>
-<table border="1" width="100%">
-<div class="card-header"><h1>Mission</h1></div>
+
+<!--Creating the table for the forms-->
+    <table border="1" width="100%">
+    <div class="card-header">
+    
+<!--Added the heading at the web page-->
+    <h1>Mission</h1>
+
+<!--added back page button to go to the main page-->
+<a href="index.php">Back to Main Page</a>
+
+</div>
+
 <tr>
 
-<th>Destination</th>
-<th>Lanuch Date</th>
-<th>Mission Type</th>
-<th>Crew Size</th>
-<th>Target ID</th>
+<!--Creating column for the Destination-->
+    <th>Destination</th>
+
+<!--Creating column for the Launch Date-->
+    <th>Lanuch Date</th>
+
+<!--Creating column for the Mission Type-->
+    <th>Mission Type</th>
+
+<!--Creating column for the Crew Size-->
+    <th>Crew Size</th>
+
+<!--Creating column for the Target ID-->
+    <th>Target ID</th>
+
 </tr>
     <?php
             
@@ -38,11 +59,11 @@
             while($data=mysqli_fetch_array($run)){
                 
 //declaring the variables which will display the fields
-                $destination=$data['destination'];
-                $launch_date=$data['launch_date'];
-                $type=$data['type'];
-                $crew_size=$data['crew_size'];
-                $target_id=$data['target_id'];
+                $destination=$data['Destination'];
+                $launch_date=$data['Launch_Date'];
+                $type=$data['Type'];
+                $crew_size=$data['Crew_Size'];
+                $target_id=$data['Target_ID'];
                 
 //displaying the table using the variables declared. displaying in a table form using tags
                 echo "<tr><td align='center'>$destination</td> <td align='center'>$launch_date</td><td align='center'>$type</td><td align='center'>$crew_size</td><td align='center'>$target_id</td></tr>";

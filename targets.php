@@ -10,6 +10,10 @@
 <body>
 
 <div> 
+
+<!--added back page button to go to the main page-->
+<a href="index.php">Back to Main Page</a>
+
 <?php 
 //here im including my connection file in order to connect to the database
 include "db_connection.php";

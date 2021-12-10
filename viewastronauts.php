@@ -13,11 +13,29 @@
 </head>
 
 <body>
-<table border="1" width="100%">
-<div class="card-header"><h1>Astronauts</h1></div>
+    
+<!--Creating the table for the forms-->
+    <table border="1" width="100%">
+    <div class="card-header">
+ 
+<!--Added the heading at the web page-->
+  <h1>Astronauts</h1>
+
+<!--added back page button to go to the main page-->
+<a href="index.php">Back to Main Page</a>
+
+</div>
+
+
+
 <tr>
+
+<!--Creating column for the Name-->
     <th>Name</th>
-<th>No of Missions</th>
+
+<!--Creating column for the No of Mission-->
+    <th>No of Missions</th>
+
 </tr>
 
     <?php

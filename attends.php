@@ -11,6 +11,9 @@
 <body>
 
 <div> 
+        <!--added back page button to go to the main page-->
+<a href="index.php">Back to Main Page</a>
+
         <?php 
 
 /*here im including my connection file in order to connect to the database*/
@@ -24,12 +27,12 @@
         echo 'Data Submitted.' . "<br>";
             // creating variables and setting them to our form input names using the POST
         $mission_id = $_POST["mission_id"];
-        $mission_name = $_POST["mission_name"];
-        $no_mission = $_POST["no_mission"];
+        // $mission_name = $_POST["mission_name"];
+        // $no_mission = $_POST["no_mission"];
         $astronaut_id = $_POST["astronaut_id"];
 
 // below delaring a variable sql, which will contain a query for the insertion into the database
-        $sql = "INSERT INTO attends(mission_id, mission_name, no_missions, astronaut_id) VALUES ($mission_id, '$mission_name', $no_mission, '$astronaut_id')";
+        $sql = "INSERT INTO attends(mission_id, astronaut_id) VALUES ($mission_id, $astronaut_id)";
         
 //using an if statement to run the query on the database
         if(!mysqli_query($connection, $sql)) {
@@ -57,12 +60,12 @@
 
         <label for="mission_id"><b>Mission ID</b></label>
         <input  class="form-control" type="integar" name="mission_id" required>
-
+<!-- 
         <label for="mission_name"><b>Mission Name</b></label>
-        <input  class="form-control" type="integar" name="mission_name" required>
+        <input  class="form-control" type="integar" name="mission_name" required> -->
 
-        <label for="no_missions"><b>No Missions</b></label>
-        <input  class="form-control" type="integar" name="no_mission" required>
+        <!-- <label for="no_missions"><b>No Missions</b></label>
+        <input  class="form-control" type="integar" name="no_mission" required> -->
 
         <label for="astronaut_id"><b>Astronauts ID</b></label>
         <input  class="form-control" type="integar" name="astronaut_id" required>
